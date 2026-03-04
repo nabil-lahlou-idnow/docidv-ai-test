@@ -14,8 +14,8 @@ let package = Package(
             targets: ["DocIDVAI-Target-Wrapper"]
         ),
         .library(
-            name: "DocIDVAI-without-XS2A",
-            targets: ["DocIDVAI-without-XS2A-Target-Wrapper"]
+            name: "DocIDVAI-with-XS2A",
+            targets: ["DocIDVAI-with-XS2A-Target-Wrapper"]
         )
     ],
     // Define external dependencies (via SPM).
@@ -27,13 +27,13 @@ let package = Package(
         // Define our 2 SDK internal binaries and their location.
         .binaryTarget(
             name: "DocIDVAI",
-            url: "https://github.com/nabil-lahlou-idnow/docidv-ai-test/releases/download/1.4.0/DocIDVAI.xcframework.zip",
-            checksum: "513047fd2ac6c0aeeee41dbe53ead57f2c1049a99fc25c5022b08926ba6ebc2d"
+            url: "https://github.com/nabil-lahlou-idnow/docidv-ai-test/releases/download/1.5.0/DocIDVAI.xcframework.zip",
+            checksum: "dd1350190a66657ce39f4a48d56b58a6034430c34e785b7751ac359b5c663bc5"
         ),
         .binaryTarget(
-            name: "DocIDVAI-without-XS2A",
-            url: "https://github.com/nabil-lahlou-idnow/docidv-ai-test/releases/download/1.4.0/DocIDVAI-without-XS2A.xcframework.zip",
-            checksum: "2ddd09da6e1a94c352e7a78b81a9aaf168fc00cc0eaf6cca27760222270196ad"
+            name: "DocIDVAI-with-XS2A",
+            url: "https://github.com/nabil-lahlou-idnow/docidv-ai-test/releases/download/1.5.0/DocIDVAI-with-XS2A.xcframework.zip",
+            checksum: "e1448e7a6c2b1fe11cfe2459bbdd55e34a2fc3c65fe3a4f3d33231177cd81bd1"
         ),
         // Define the third parties dependencies imported locally.
         .binaryTarget(
@@ -59,12 +59,12 @@ let package = Package(
             ],
             path: "sources/DocIDVAI" // Path to an empty .swift file, needed by SPM.
         ),
-        // Define a wrapper for 2nd target without XS2A library.
+        // Define a wrapper for 2nd target with XS2A library.
         .target(
-            name: "DocIDVAI-without-XS2A-Target-Wrapper",
+            name: "DocIDVAI-with-XS2A-Target-Wrapper",
             dependencies: [
-                // Local DocIDVAI sdk binaries (without XS2A lib).
-                "DocIDVAI-without-XS2A",
+                // Local DocIDVAI sdk binaries (with XS2A lib).
+                "DocIDVAI-with-XS2A",
                 // External frameworks saved locally.
                 "FaceTecSDK",
                 "ReadID_UI",
@@ -72,7 +72,7 @@ let package = Package(
                 .product(name: "UnisseySdk", package: "sdk-ios"),
                 .product(name: "SunflowerUIKit", package: "sunflower-sdk-ios")
             ],
-            path: "sources/DocIDVAI-without-XS2A" // Path to another empty .swift file, needed by SPM.
+            path: "sources/DocIDVAI-with-XS2A" // Path to another empty .swift file, needed by SPM.
         )
     ]
 )
