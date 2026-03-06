@@ -27,13 +27,13 @@ let package = Package(
         // Define our 2 SDK internal binaries and their location.
         .binaryTarget(
             name: "DocIDVAI",
-            url: "https://github.com/nabil-lahlou-idnow/docidv-ai-test/releases/download/1.6.1/DocIDVAI.xcframework.zip",
-            checksum: "5d91076cd414d5097ba25428aa54ff20cebf2e1d1440ae4b7fcb885bb1eb66eb"
+            url: "https://github.com/nabil-lahlou-idnow/docidv-ai-test/releases/download/1.6.2/DocIDVAI.xcframework.zip",
+            checksum: "1c0171fad852615c0300829f680eb1dd4f05d700d4ad3b73ab9d3a10ed76b070"
         ),
         .binaryTarget(
             name: "DocIDVAI-with-XS2A",
-            url: "https://github.com/nabil-lahlou-idnow/docidv-ai-test/releases/download/1.6.1/DocIDVAI-with-XS2A.xcframework.zip",
-            checksum: "94fd84a01f7ec3ca2b062e0e78e0c2d1d108b8b3ed94b6b6528c16459c997727"
+            url: "https://github.com/nabil-lahlou-idnow/docidv-ai-test/releases/download/1.6.2/DocIDVAI-with-XS2A.xcframework.zip",
+            checksum: "c70446f39ed0011045bd58407eca3ece6f36f82962ddf668a9b61a8cb5de99a4"
         ),
         // Define the third parties dependencies imported locally.
         .binaryTarget(
